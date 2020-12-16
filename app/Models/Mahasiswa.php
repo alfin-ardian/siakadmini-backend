@@ -1,9 +1,9 @@
 <?php
-namespace App;
+namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 class Mahasiswa extends Model{
-    protected $tabel = 'siakad_mini.mahasiswa';
+    protected $table = 'mahasiswa';
     protected $guarded = [];
 
 
