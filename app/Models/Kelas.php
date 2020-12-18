@@ -2,8 +2,9 @@
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
-class Mahasiswa extends Model{
-    protected $table = 'mahasiswa';
+class Kelas extends Model{
+    protected $table = 'kelas';
+    protected $primaryKey = 'idkelas';
     protected $guarded = [];
 
 

@@ -1,13 +1,14 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Mahasiswa;
+use App\Models\Mahasiswa;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
-class MahasiswaController extends Controllers{
+class MahasiswaController extends Controller{
     public function index(Request $request){
-        return Mahasiswa::get();
+        // return DB::table('mahasiswa')->get();
+        return Mahasiswa::paginate();
     }
 
     public function find($id){
@@ -15,7 +16,8 @@ class MahasiswaController extends Controllers{
     }
 
     public function create(Request $request){
-        return Mahasiswa::create($request->all());
+        Mahasiswa::create($request->all());
+        return ['message' => 'Mahasiswa berhasil ditambah :)'];
     }
 
     public function update(Request $request,$id){
