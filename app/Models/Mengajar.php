@@ -2,10 +2,10 @@
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
-class Mahasiswa extends Model{
-    protected $table = 'mahasiswa';
+class Mengajar extends Model{
+    protected $table = 'mengajar';
     protected $guarded = [];
-    protected $primaryKey = 'nim';
+    protected $primaryKey = 'idkelas';
 
 
     public function jurusan(){
